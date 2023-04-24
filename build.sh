@@ -8,6 +8,11 @@ HOSTGROUP=$(id -gn)
 
 printHelp() {
     echo "GCC4TI cross compiler assitant script"
+    echo "all commands are run in current working dir\n"
+    echo "Useages:"
+	echo "./build.sh [arg]"
+	echo "		[arg]: run any command in the container"
+	echo "			   e.g.: make, make clean"
 }
 
 
