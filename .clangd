@@ -1,0 +1,8 @@
+CompileFlags:
+  Add: [
+    -I/home/wstrn/.local/gcc4ti/include/C,
+    -I/home/wstrn/.local/gcc4ti/include/S,
+    -I/home/wstrn/.local/gcc4ti/include/ASM,
+  ]
+Diagnostics:
+  Suppress: "*"
