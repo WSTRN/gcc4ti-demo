@@ -30,12 +30,12 @@ echo $SOPTS
 
 CONTAINER_NAME=gcc4ti_$RANDOM
 if ! [[ $SOPTS ]]; then
-    docker run --name $CONTAINER_NAME -it -v $PWD:/work \
+    docker run --platform linux/amd64 --name $CONTAINER_NAME -it -v $PWD:/work \
             -e HOST_UID=$HOSTUID -e HOST_GID=$HOSTGID \
             -e HOST_USER=$HOSTUSER -e HOST_GROUP=$HOSTGROUP \
             gcc4ti "$@"
 else
-    docker run --name $CONTAINER_NAME -it -v $PWD:/work \
+    docker run --platform linux/amd64 --name $CONTAINER_NAME -it -v $PWD:/work \
             -e HOST_UID=$HOSTUID -e HOST_GID=$HOSTGID \
             -e HOST_USER=$HOSTUSER -e HOST_GROUP=$HOSTGROUP \
             gcc4ti $SOPTS
